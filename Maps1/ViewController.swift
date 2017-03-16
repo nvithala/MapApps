@@ -30,6 +30,7 @@ class ViewController: UIViewController{
     var totalDistance: String!
     var totalDurationInSeconds: UInt = 0
     var totalDuration: String!
+    var counter:UInt = 0
     
     var originMarker: GMSMarker!
     var destinationMarker: GMSMarker!
@@ -145,7 +146,14 @@ class ViewController: UIViewController{
         
         let path: GMSPath = GMSPath(fromEncodedPath: route)!
         routePolyline = GMSPolyline(path: path)
+        if counter == 0{
+            routePolyline.strokeColor = UIColor.blueColor()
+        } else{
+            routePolyline.strokeColor = UIColor.darkGrayColor()
+        }
+        routePolyline.strokeWidth = 5
         routePolyline.map = mapView1
+        self.counter = self.counter+1
     }
 
 }
