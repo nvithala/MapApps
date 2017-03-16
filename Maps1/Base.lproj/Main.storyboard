@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Maps1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4pM-tD-e8W" customClass="GMSMapView" colorLabel="IBBuiltInLabel-Gray">
+                                <rect key="frame" x="0.0" y="46" width="600" height="510"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="500" id="mAY-Tb-4Eg"/>
+                                </constraints>
+                            </view>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o9Y-ta-C2p">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem style="plain" id="OcN-gj-M3L">
+                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9zb-Xy-BdW">
+                                            <rect key="frame" x="20" y="7" width="41" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="HitMe"/>
+                                        </button>
+                                        <connections>
+                                            <action selector="createRoute:" destination="BYZ-38-t0r" id="xA7-YO-mr5"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1QR-7J-DAR">
+                                <rect key="frame" x="5" y="8" width="98" height="30"/>
+                                <color key="backgroundColor" red="0.81676404911855283" green="1" blue="0.87879082258438879" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Get Directions">
+                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleOrigin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eTm-ap-27Q"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" background="Ic_compass_needle.png" translatesAutoresizingMaskIntoConstraints="NO" id="YqL-Jr-FK6">
+                                <rect key="frame" x="136" y="8" width="97" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.99445562833621837" blue="0.31950729339051431" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u0w-gU-MY4">
+                                <rect key="frame" x="241" y="8" width="97" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.99445562833621837" blue="0.31950729339051431" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kuj-G7-mE2">
+                                <rect key="frame" x="346" y="8" width="97" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.99445562833621837" blue="0.31950729339051431" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oIO-PU-CA9">
+                                <rect key="frame" x="451" y="8" width="97" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.99445562833621837" blue="0.31950729339051431" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4pM-tD-e8W" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="ZLi-y9-qVW"/>
+                            <constraint firstItem="4pM-tD-e8W" firstAttribute="top" secondItem="oIO-PU-CA9" secondAttribute="bottom" constant="8" id="ecu-ZS-OaK"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4pM-tD-e8W" secondAttribute="trailing" constant="-20" id="fiw-Og-uUw"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="destination" destination="u0w-gU-MY4" id="UJz-SH-LGL"/>
+                        <outlet property="distance" destination="Kuj-G7-mE2" id="SlY-cX-L8l"/>
+                        <outlet property="dummy" destination="1QR-7J-DAR" id="6Vh-by-bqZ"/>
+                        <outlet property="duration" destination="oIO-PU-CA9" id="cp5-Eo-X47"/>
+                        <outlet property="mapView1" destination="4pM-tD-e8W" id="yfc-Ja-wUp"/>
+                        <outlet property="origin" destination="YqL-Jr-FK6" id="oYo-rz-Dmp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="551" y="424"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Ic_compass_needle.png" width="25" height="25"/>
+    </resources>
+</document>
